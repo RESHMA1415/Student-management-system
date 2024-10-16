@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin register</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body{
+       background-color: rgba(18, 47, 105, 0.847);
+       }
+       #ul{
+       background-color: rgba(161, 161, 224, 0.888);
+      }
+      #h5{
+      padding-top: 10px;
+      padding-right: 600px;
+      text-align: left;
+      font-family: ravie;
+     }
+   
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <ul class="nav justify-content-end " id="ul">
+            <h5 id="h5">Home </h5>
+            <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="register"class="nav-link">Register</a></li>
+        </ul>
+    </div>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <h1 style="text-align: center">Student Registration</h1>
+        <table style="border: 2px solid blue; background-color: blanchedalmond; width: 500px; height: 650px;" align="center" >
+        <tr>
+            <th style="text-align: center"> Firstname</th>
+        <td><input type="text" name="firstname" id="" placeholder="enter firstname"style="width: 80%;"></td>
+       </tr>
+       <tr>
+        <th style="text-align: center">Lastname</th>
+        <td><input type="text" name="lastname" id="" placeholder="enter lastname"style="width: 80%;"> </td>
+       </tr>
+       <tr><th style="text-align: center">Address</th>
+        <td> <input type="text" name="address" id="" placeholder="enter address"style="width: 80%;"></td>
+       </tr>
+       <tr><th style="text-align: center">Email</th>
+        <td><input type="email" name="email" id="" placeholder="enter email"style="width: 80%;"></td>
+        </tr>
+       <tr><th style="text-align: center">Phone</th>
+        <td><input type="number" name="phone" id="" placeholder="enter phonenumber"style="width: 80%;"></td>
+        </tr>
+       <tr><th style="text-align: center">Guardian</th>
+        <td><input type="text" name="guardian" id="" placeholder="enter guardian name"style="width: 80%;"> </td>
+        </tr>
+       <tr><th style="text-align: center">Username</th>
+        <td> <input type="text" name="username" id="" placeholder="enter username"style="width: 80%;"></td>
+        </tr>
+       <tr><th style="text-align: center">Lastname</th>
+        <td><input type="password" name="password" id="" placeholder="enter password"style="width: 80%;"></td>
+        </tr>
+       <tr>
+        <td><input type="submit" value="Register"style="margin-left: 150%;"></td>
+    </tr>
+    </form>
+</body>
+</html>

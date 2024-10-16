@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teacher register</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <style>
+          body{
+            background-color: rgba(12, 58, 149, 0.434);
+        }
+        #ul{
+            background-color: rgba(131, 131, 229, 0.888);
+          }
+        #h5{
+            padding-top: 10px;
+            padding-right:600px;
+            text-align: left;
+            font-family: ravie;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <ul class="nav justify-content-center" id="ul">
+            <h5 id="h5">Admin Home Page </h5>
+            <li class="nav-item"><a href="view_teacher"class="nav-link">View Teacher</a></li>
+            <li class="nav-item"><a href="view_student"class="nav-link">View Student</a></li>
+            <li class="nav-item"><a href="logout"class="nav-link">Logout</a></li>
+        </ul>
+    </div>
+    <form action="" method="post" id="f">
+        {% csrf_token %}
+        <table style="border: 2px solid blue; background-color: blanchedalmond; width: 500px; height: 650px;" align="center" >
+            <tr>
+                <th style="text-align: center">
+                    Firstname <td><input type="text" name="firstname" id="" placeholder="enter firstname" style="width: 80%;"></td>
+                </th></tr>
+            <tr>
+                <th style="text-align: center"> Lastname
+                        <td><input type="text" name="lastname" id="" placeholder="enter lastname" style="width: 80%;">  </td>
+                </th></tr>
+            <tr>
+                <th style="text-align: center">Address
+                    <td><input type="text" name="address" id="" placeholder="enter address" style="width: 80%;"> </td>
+                 </th></tr>
+            <tr>
+                <th style="text-align: center">Email
+                    <td><input type="email" name="email" id="" placeholder="enter email" style="width: 80%;"> </td>
+                 </th></tr>
+            <tr>
+                <th style="text-align: center">Phone
+                    <td><input type="number" name="phone" id="" placeholder="enter phonenumber" style="width: 80%;"> </td>
+                 </th></tr>
+            <tr>
+                <th style="text-align: center">Salary
+                    <td><input type="number" name="salary" id="" placeholder="enter salary" style="width: 80%;"> </td>
+                 </th></tr>
+
+            <tr>
+                <th style="text-align: center"> Experience
+                    <td><input type="number" name="experience" id="" placeholder="enter experience" style="width: 80%;"> </td>
+                 </th></tr>
+            <tr>
+                <th style="text-align: center"> Username
+                    <td><input type="text" name="username" id="" placeholder="enter username" style="width: 80%;"></td>
+                  </th></tr>
+            <tr>
+                <th style="text-align: center"> Password
+                    <td><input type="password" name="password" id="" placeholder="enter password" style="width: 80%;">  </td>
+                </th></tr>
+            <tr style="text-align: center;margin-left: 50%;">
+                <td>
+                <input type="submit" value="Register" style="margin-left: 150%;">
+            </td>
+            </tr>
+    </form>
+</body>
+</html>

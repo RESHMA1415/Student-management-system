@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body{
+       background-color: rgba(18, 47, 105, 0.847);
+       }
+       #ul{
+       background-color: rgba(161, 161, 224, 0.888);
+      }
+      #h5{
+      padding-top: 10px;
+      padding-right: 600px;
+      text-align: left;
+      font-family: ravie;
+     }
+   
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <ul class="nav justify-content-end" id="ul">
+            <h5 id="h5">Teacher Home Page </h5>
+            <li class="nav-item"><a href="edit_teacher" class="nav-link">Edit Profile</a></li>
+            <li class="nav-item"><a href="view_stud_profile" class="nav-link">View Profile</a></li>
+            <li class="nav-item"><a href="view_students"class="nav-link">View Student</a></li>
+            <li class="nav-item"><a href="logout"class="nav-link">Logout</a></li>
+        </ul>
+    </div>
+    <form action="/update_student/{{edit.student_id.id}}" method="post">
+        {% csrf_token %}
+        <table style="border: 2px solid blue; background-color: blanchedalmond; width: 500px; height: 650px;" align="center" >
+            <tr>
+                <th>Firstname</th>
+                <td><input type="text" name="firstname" placeholder="firstname" value="{{edit.student_id.first_name}}"></td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td><input type="text" name="lastname" placeholder="lastname" value="{{edit.student_id.last_name}}"></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><input type="text" name="address" placeholder="address" value="{{edit.address}}"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="email" name="email" placeholder="email" value="{{edit.student_id.email}}"></td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td><input type="number" name="phone" placeholder="phone" value="{{edit.phone}}"></td>
+            </tr>
+            <tr>
+                <th>Guardian</th>
+                <td><input type="text" name="guardian" placeholder="guardian" value="{{edit.guardian}}"></td>
+            </tr>
+            <!-- <tr>
+                <th>Username</th>
+                <td><input type="text" name="username" placeholder="username" value="{{edit.student_id.username}}"></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="password" placeholder="Password" value="{{edit.student_id.password}}"></td>
+            </tr> -->
+            <tr style="text-align: center;margin-left: 50%;">
+                <td><input type="submit" value="update" style="margin-left: 150%;"></td>
+            </tr>
+    </form>
+</body>
+</html>
